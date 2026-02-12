@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Kitchen",
+        "stream_hq": "rtsp://username:password@10.101.101.17/stream1",
+        "stream_lq": "rtsp://username:password@10.101.101.17/stream2",
+        "width": 1280,
+        "height": 720,
+        "frame_history": 10,
+        "active_threshold": 0.002,
+        "start_frames": 15,
+        "prestop_low_min": 10,
+        "prestop_low_max": 19,
+        "prestop_low_full": 20,
+        "prestop_high_max": 20,
+        "cancel_prestop_frames": 15,
+        "full_stop_delay": 4.0
+    },
+    {
+        "name": "Bedroom",
+        "stream_hq": "rtsp://username:password@10.101.101.16/stream1",
+        "stream_lq": "rtsp://username:password@10.101.101.16/stream2",
+        "width": 1280,
+        "height": 720,
+        "frame_history": 10,
+        "active_threshold": 0.002,
+        "start_frames": 15,
+        "prestop_low_min": 10,
+        "prestop_low_max": 19,
+        "prestop_low_full": 20,
+        "prestop_high_max": 20,
+        "cancel_prestop_frames": 15,
+        "full_stop_delay": 4.0
+    }
+]
