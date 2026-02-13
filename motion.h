@@ -33,9 +33,9 @@ typedef struct {
 
 /* return 0 on success, -1 on error */
 int generate_motion_shader_glsl(
-    float sigma,
-    int radius,
-    float motion_threshold,
+    double sigma,
+    double radius,
+    double motion_threshold,
     int width,
     int height,
     char *out_path,

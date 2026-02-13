@@ -107,7 +107,7 @@ static void *camera_loop(void *arg) {
         "-seek2any", "1",
         "-fflags", "+genpts",
         "-i", (char *)cam->stream_lq,
-        "-vf", "libplacebo=custom_shader_path=frame-diff.glsl",
+        "-vf", vf_arg,
         "-an",
         "-f", "rawvideo",
         "-pix_fmt", "gray",

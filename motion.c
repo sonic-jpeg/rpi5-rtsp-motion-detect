@@ -14,9 +14,9 @@
 
 /* return 0 on success, -1 on error */
 int generate_motion_shader_glsl(
-    float sigma,
-    int radius,
-    float motion_threshold,
+    double sigma,
+    double radius,
+    double motion_threshold,
     int width,
     int height,
     char *out_path,
@@ -26,7 +26,7 @@ int generate_motion_shader_glsl(
     snprintf(
         out_path,
         out_path_len,
-        "motion_s%.2f_r%d_t%.4f_%dx%d.glsl",
+        "motion_s%.2f_r%.2f_t%.3f_%dx%d.glsl",
         sigma,
         radius,
         motion_threshold,
@@ -56,12 +56,12 @@ int generate_motion_shader_glsl(
         "\n"
         "////////////////////////////////////////////////////////////////////////\n"
         "// AUTO-GENERATED FILE — DO NOT EDIT\n"
-        "// sigma=%.3f radius=%d threshold=%.6f size=%dx%d\n"
+        "// sigma=%.2f radius=%.2f threshold=%.3f size=%dx%d\n"
         "////////////////////////////////////////////////////////////////////////\n"
         "\n"
-        "#define SIGMA %.6f\n"
-        "#define RADIUS %d.0\n"
-        "#define MOTION_THRESHOLD %.6f\n"
+        "#define SIGMA %.2f\n"
+        "#define RADIUS %.2f\n"
+        "#define MOTION_THRESHOLD %.3f\n"
         "\n"
         "#define get_weight(x) (exp(-(x)*(x)/(2.0*SIGMA*SIGMA)))\n"
         "\n"

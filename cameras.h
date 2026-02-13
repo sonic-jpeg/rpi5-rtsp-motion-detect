@@ -30,7 +30,7 @@ typedef struct {
 
     /* ---- shader parameters ---- */
     double sigma;
-    int radius;
+    double radius;
     double motion_threshold;
 
 } camera_t;

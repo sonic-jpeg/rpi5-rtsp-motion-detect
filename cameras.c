@@ -84,7 +84,7 @@ int load_cameras(const char *filename) {
 		
 		/* ---- shader config ---- */
         c->sigma            = JDBL(item, "sigma", 4.0);
-        c->radius           = JINT(item, "radius", 4.0);
+        c->radius           = JDBL(item, "radius", 4.0);
         c->motion_threshold = JDBL(item, "motion_threshold", 0.025);
 
     }
